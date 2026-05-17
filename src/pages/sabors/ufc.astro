@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+---
+
+<Layout title="Voltedge x UFC | Edició Limitada">
+  <Navbar />
+  
+  <main class="bg-black text-white min-h-screen pt-32 pb-24 px-6 md:px-12 flex items-center relative overflow-hidden">
+    
+    <div id="popup-exit" class="fixed top-10 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white px-6 py-4 rounded-xl font-bold shadow-2xl flex items-center gap-3 border border-emerald-400 z-50 opacity-0 pointer-events-none transition-all duration-500 scale-90">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+      <span>Subscripció correcta! T'avisarem de la reposició amb un email.</span>
+    </div>
+
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-32 items-center">
+      
+      <div class="flex items-center justify-center min-h-[550px] md:min-h-[750px] relative group select-none">
+        <div class="absolute w-[30rem] h-[30rem] bg-amber-500/10 rounded-full blur-[160px] pointer-events-none"></div>
+        
+        <img 
+          src="/llauna-ufc.png" 
+          alt="Voltedge x UFC" 
+          class="h-[95vh] max-h-[820px] w-auto object-contain transform rotate-3 lg:scale-135 group-hover:rotate-6 group-hover:scale-140 transition duration-500 filter drop-shadow-[0_55px_55px_rgba(217,119,6,0.25)]" 
+        />
+      </div>
+
+      <div class="flex flex-col justify-center">
+        <span class="text-xs font-bold tracking-widest text-amber-500 uppercase block mb-3">EDICIÓ LIMITADA - SOLD OUT</span>
+        
+        <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tight mb-6">
+          VOLTEDGE <span class="bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 bg-clip-text text-transparent">X UFC</span>
+        </h1>
+        
+        <p class="text-gray-400 text-sm md:text-base mb-8 leading-relaxed max-w-xl">
+          Dissenyat per a combatents d'elit. Potència extrema micronitzada per al màxim rendiment a l'octàgon. Actualment no ens queda estoc, però pots subscriure't a la llista d'espera oficial per rebre una alerta preferent.
+        </p>
+
+        <div class="bg-neutral-950 p-6 rounded-2xl border border-neutral-900 max-w-lg mb-8">
+          <h3 class="text-sm font-bold uppercase tracking-wider mb-3 text-white">Avisa'm quan hi hagi estoc</h3>
+          <form id="form-avisar" class="flex flex-col sm:flex-row gap-3">
+            <input 
+              type="email" 
+              required
+              placeholder="Introdueix el teu email..." 
+              class="flex-1 bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition"
+            />
+            <button 
+              type="submit" 
+              class="bg-white text-black hover:bg-amber-500 hover:text-white font-bold py-3 px-6 rounded-xl uppercase tracking-wider text-xs transition duration-300 whitespace-nowrap"
+            >
+              Avisar-me
+            </button>
+          </form>
+        </div>
+
+        <div class="border-t border-neutral-800 pt-8 max-w-lg">
+          <h3 class="text-xs font-bold uppercase tracking-widest mb-4 text-gray-400">Valors per llauna (500ml)</h3>
+          <div class="space-y-3 text-xs md:text-sm text-gray-400">
+            <div class="flex justify-between border-b border-neutral-900 pb-2"><span>Energia</span><span class="text-white font-medium">18 kcal</span></div>
+            <div class="flex justify-between border-b border-neutral-900 pb-2"><span>Grasses / Saturades</span><span class="text-white font-medium">0g / 0g</span></div>
+            <div class="flex justify-between border-b border-neutral-900 pb-2"><span>Carbohidrats / Sucres</span><span class="text-white font-medium">0g / 0g</span></div>
+            <div class="flex justify-between border-b border-neutral-900 pb-2"><span>Proteïnes</span><span class="text-white font-medium">0g</span></div>
+            <div class="flex justify-between pb-2"><span>Sodi</span><span class="text-white font-medium">0.20g</span></div>
+          </div>
+        </div>
+        
+        <div class="mt-16 pt-4 w-full block clear-both">
+          <a href="/" class="inline-flex items-center gap-2 border border-neutral-700 text-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-full uppercase tracking-wider text-xs transition duration-300 shadow-lg">
+            ← Tornar al catàleg
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const form = document.getElementById('form-avisar');
+  const popup = document.getElementById('popup-exit');
+
+  if (form && popup) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      (e.target as HTMLFormElement).reset();
+
+      popup.classList.remove('opacity-0', 'pointer-events-none', 'scale-90');
+      popup.classList.add('opacity-100', 'scale-100');
+
+      setTimeout(() => {
+        popup.classList.remove('opacity-100', 'scale-100');
+        popup.classList.add('opacity-0', 'pointer-events-none', 'scale-90');
+      }, 4000);
+    });
+  }
+</script>

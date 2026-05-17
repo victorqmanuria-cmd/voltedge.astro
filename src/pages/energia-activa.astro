@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Què és l'Energia Activa? | Voltedge">
+  <Navbar />
+  
+  <main class="bg-black text-white min-h-screen pt-32 pb-24 px-6 md:px-12 relative overflow-hidden">
+    <div class="absolute top-1/4 left-1/10 w-96 h-96 bg-blue-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/10 w-96 h-96 bg-red-600/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto w-full relative z-10">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-bold tracking-widest text-red-500 uppercase block mb-3">CIÈNCIA DE RENDIMENT</span>
+        <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tight mb-6 leading-none">
+          QUÈ ÉS L'ENERGIA <br />
+          <span class="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">ACTIVA?</span>
+        </h1>
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+          No creem només begudes refrescants; dissenyem un sistema d'activació bioenergètica líquida. L'Energia Activa és el resultat de combinar elements naturals estimulants amb micronutrients d'absorció ràpida que milloren l'enfocament mental i la resistència física sense patir la típica baixada posterior.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        
+        <div class="bg-neutral-950/60 backdrop-blur-md border border-neutral-900 p-8 rounded-2xl transition hover:border-neutral-800 shadow-xl flex flex-col justify-between min-h-[250px]">
+          <div>
+            <span class="inline-block bg-blue-950 text-blue-400 font-black text-xs px-3 py-1.5 rounded-lg mb-6">01</span>
+            <h3 class="text-lg font-black uppercase tracking-tight text-white mb-3">ENFOCAMENT MENTAL</h3>
+            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+              La nostra dosi calibrada de cafeïna d'alta puritat estimula el sistema nerviós central millorant el temps de reacció instantani.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-neutral-950/60 backdrop-blur-md border border-neutral-900 p-8 rounded-2xl transition hover:border-neutral-800 shadow-xl flex flex-col justify-between min-h-[250px]">
+          <div>
+            <span class="inline-block bg-amber-950 text-amber-400 font-black text-xs px-3 py-1.5 rounded-lg mb-6">02</span>
+            <h3 class="text-lg font-black uppercase tracking-tight text-white mb-3">METABOLISME EFICIENT</h3>
+            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+              L'addició de la Vitamina B6 optimitza el metabolisme energètic, ajudant al cos a extreure i cremar energia de forma eficient.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-neutral-950/60 backdrop-blur-md border border-neutral-900 p-8 rounded-2xl transition hover:border-neutral-800 shadow-xl flex flex-col justify-between min-h-[250px]">
+          <div>
+            <span class="inline-block bg-red-950 text-red-400 font-black text-xs px-3 py-1.5 rounded-lg mb-6">03</span>
+            <h3 class="text-lg font-black uppercase tracking-tight text-white mb-3">ZERO CALORIES SOLTES</h3>
+            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+              Formulacions dissenyades sense sucres afegits de càrrega per mantenir l'índex glucèmic completament sota control.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,109 @@
+
+
+<section class="parallax-section">
+  <div class="parallax-content">
+    <span class="parallax-tag">SENTS LA DESCÀRREGA?</span>
+    <h2 class="parallax-title">TRASPASSA ELS <span class="text-blue-500">TEUS LÍMITS</span></h2>
+    <p class="parallax-desc">
+      No és una beguda més. És el combustible elèctric dissenyat per mantenir els teus reflexes al màxim nivell i la teva ment enfocada en el que realment importa. Activa el teu mode Alpha ara mateix.
+    </p>
+    <a href="#cataleg" class="parallax-btn">
+      Explorar Sabors
+    </a>
+  </div>
+</section>
+
+<style>
+  .parallax-section {
+    /* NOTA: Canvia '/fons-energia.jpg' per la ruta de la teva imatge de fons de qualitat (.jpg o .webp) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('/fons-energia.jpg');
+    min-height: 80vh;
+
+    /* PROPIETATS CLAU DE L'EFECTE PARALLAX SOL·LICITAT */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Maquetació del contingut */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    border-top: 1px solid #171717;
+    border-bottom: 1px solid #171717;
+  }
+
+  .parallax-content {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: white;
+    padding: 3rem 2rem;
+    max-w: 32rem;
+    width: 100%;
+    text-center: center;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .parallax-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.25em;
+    color: #eab308; /* groc/ambre */
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .parallax-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+  }
+
+  .parallax-desc {
+    color: #a3a3a3; /* gray-400 */
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .parallax-btn {
+    background-color: white;
+    color: black;
+    font-weight: 800;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .parallax-btn:hover {
+    background-color: #3b82f6; /* blau */
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+  }
+
+  /* LIMITACIÓ IMPORTANT: Desactivar en mòbils per rendiment i compatibilitat */
+  @media (max-width: 768px) {
+    .parallax-section {
+      background-attachment: scroll; /* El fons es mou normalment en mòbils */
+      min-height: 60vh;
+    }
+    .parallax-title {
+      font-size: 1.75rem;
+    }
+  }
+</style>

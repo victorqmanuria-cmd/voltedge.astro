@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+---
+
+<Layout title="Voltedge Bubble Gum | Especificacions">
+  <Navbar />
+  
+  <main class="bg-black text-white min-h-screen pt-32 pb-24 px-6 md:px-12 flex items-center relative overflow-hidden">
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-32 items-center">
+      
+      <div class="flex items-center justify-center min-h-[550px] md:min-h-[750px] relative group select-none">
+        <div class="absolute w-[30rem] h-[30rem] bg-pink-600/10 rounded-full blur-[160px] pointer-events-none"></div>
+        
+        <img 
+          src="/llauna-bubblegum.png" 
+          alt="Voltedge Bubble Gum" 
+          class="h-[95vh] max-h-[820px] w-auto object-contain transform -rotate-3 lg:scale-135 group-hover:rotate-6 group-hover:scale-140 transition duration-500 filter drop-shadow-[0_55px_55px_rgba(0,0,0,0.8)]" 
+        />
+      </div>
+
+      <div class="flex flex-col justify-center">
+        <span class="text-xs font-bold tracking-widest text-pink-500 uppercase block mb-3">EDICIÓ ULTRA DOLÇA</span>
+        <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tight mb-6">
+          VOLTEDGE <span class="text-pink-500">BUBBLE GUM</span>
+        </h1>
+        <p class="text-gray-400 text-sm md:text-base mb-10 leading-relaxed max-w-xl">
+          Nostàlgia líquida d'alt voltatge. Un sabor potent i disruptiu inspirat en el xiclet clàssic, creat especialment per a la comunitat gamer i d'esports que exigeixen un estímul organolèptic brutal i un focus mental inalterable.
+        </p>
+
+        <div class="grid grid-cols-3 gap-4 mb-10 max-w-lg">
+          <div class="border-l-2 border-neutral-800 pl-4 py-1">
+            <span class="text-2xl font-black text-white block tracking-tight">160mg</span>
+            <span class="text-[10px] uppercase text-gray-500 font-bold tracking-wider">Cafreïna</span>
+          </div>
+          <div class="border-l-2 border-neutral-800 pl-4 py-1">
+            <span class="text-2xl font-black text-white block tracking-tight">100%</span>
+            <span class="text-[10px] uppercase text-gray-500 font-bold tracking-wider">Taurina</span>
+          </div>
+          <div class="border-l-2 border-neutral-800 pl-4 py-1">
+            <span class="text-2xl font-black text-white block tracking-tight">0g</span>
+            <span class="text-[10px] uppercase text-gray-500 font-bold tracking-wider">Sucres</span>
+          </div>
+        </div>
+
+        <div class="border-t border-neutral-800 pt-8 max-w-lg">
+          <h3 class="text-xs font-bold uppercase tracking-widest mb-4 text-gray-400">Valors per llauna (500ml)</h3>
+          <div class="space-y-3 text-xs md:text-sm text-gray-400">
+            <div class="flex justify-between border-b border-neutral-900 pb-2"><span>Energia</span><span class="text-white font-medium">16 kcal</span></div>
+            <div class="flex justify-between border-b border-neutral-900 pb-2"><span>Grasses / Saturades</span><span class="text-white font-medium">0g / 0g</span></div>
+            <div class="flex justify-between border-b border-neutral-900 pb-2"><span>Carbohidrats / Sucres</span><span class="text-white font-medium">0g / 0g</span></div>
+            <div class="flex justify-between border-b border-neutral-900 pb-2"><span>Proteïnes</span><span class="text-white font-medium">0g</span></div>
+            <div class="flex justify-between pb-2"><span>Sodi</span><span class="text-white font-medium">0.19g</span></div>
+          </div>
+        </div>
+        
+        <div class="mt-16 pt-4 w-full block clear-both">
+          <a href="/" class="inline-flex items-center gap-2 border border-neutral-700 text-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-full uppercase tracking-wider text-xs transition duration-300 shadow-lg">
+            ← Tornar al catàleg
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>
