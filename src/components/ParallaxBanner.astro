@@ -1,5 +1,3 @@
-
-
 <section class="parallax-section">
   <div class="parallax-content">
     <span class="parallax-tag">SENTS LA DESCÀRREGA?</span>
@@ -15,17 +13,17 @@
 
 <style>
   .parallax-section {
-    /* NOTA: Canvia '/fons-energia.jpg' per la ruta de la teva imatge de fons de qualitat (.jpg o .webp) */
+ 
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('/fons-energia.jpg');
     min-height: 80vh;
 
-    /* PROPIETATS CLAU DE L'EFECTE PARALLAX SOL·LICITAT */
+    
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    /* Maquetació del contingut */
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +54,7 @@
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.25em;
-    color: #eab308; /* groc/ambre */
+    color: #eab308; 
     text-transform: uppercase;
     margin-bottom: 0.75rem;
   }
@@ -71,7 +69,7 @@
   }
 
   .parallax-desc {
-    color: #a3a3a3; /* gray-400 */
+    color: #a3a3a3;
     font-size: 0.875rem;
     line-height: 1.5rem;
     margin-bottom: 2rem;
@@ -91,15 +89,15 @@
   }
 
   .parallax-btn:hover {
-    background-color: #3b82f6; /* blau */
+    background-color: #3b82f6; 
     color: white;
     box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
   }
 
-  /* LIMITACIÓ IMPORTANT: Desactivar en mòbils per rendiment i compatibilitat */
+ 
   @media (max-width: 768px) {
     .parallax-section {
-      background-attachment: scroll; /* El fons es mou normalment en mòbils */
+      background-attachment: scroll;
       min-height: 60vh;
     }
     .parallax-title {
